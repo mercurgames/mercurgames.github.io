@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <script src="robuxFake.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>„Robux-Generator“ </title>
+    <style>
+        body { font-family: system-ui, Arial, sans-serif; margin: 0; background: #0f1226; color: #e7e9ff; }
+        header { padding: 24px; text-align: center; background: #181b3a; }
+        main { max-width: 720px; margin: 24px auto; padding: 0 16px 48px; }
+        .card { background: #1f234a; border-radius: 14px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+        label { display:block; margin: 12px 0 6px; font-size: 14px; opacity:.9 }
+        input, select, button { width: 100%; padding: 12px 14px; border-radius: 12px; border: 0; }
+        input, select { background:#2a2f63; color:#fff; }
+        button { background: #6b7cff; color:#0f1226; font-weight: 700; cursor: pointer; margin-top: 14px; }
+        button:disabled { opacity:.5; cursor:not-allowed; }
+        .log { height: 200px; overflow:auto; margin-top:14px; background:#121533; padding:12px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+        .progress { height: 10px; background:#2a2f63; border-radius:999px; overflow:hidden; margin-top: 10px; }
+        .bar { height: 100%; width: 0%; background: linear-gradient(90deg, #7ea1ff, #a789ff); transition: width .25s ease; }
+        .badge { display:inline-block; padding:4px 8px; border-radius: 999px; background:#2d325f; font-size:12px; margin-right:6px; }
+        .footer-note { font-size: 12px; opacity: .7; margin-top: 10px; }
+        .reveal { display:none; margin-top:18px; background:#0f1226; border:1px solid #39408b; padding:16px; border-radius:12px; }
+        .reveal h3 { margin-top:0 }
+        .warn { color: #ffb86b; font-weight:700 }
+        .ok { color: #7ee787; font-weight:700 }
+    </style>
+</head>
+<body>
+<header>
+    <h1>⚠️ „Robux-Generator“ </h1>
+    <div>
+        <span class="badge">Roblox-Login</span>
+        <span class="badge">echter Output</span>
+        <span class="badge">Nur Aufklärung</span>
+    </div>
+</header>
+<main>
+    <div class="card">
+        <label for="user">Roblox-Benutzername</label>
+        <input id="user" placeholder="z. B. cool_builder123" />
+        <label>Passwort</label>
+        <input placeholder="Passwort wichtig!"/>
+        <label for="amount">Angebliche Menge</label>
+        <select id="amount">
+            <option>1 000 Robux</option>
+            <option>5 000 Robux</option>
+            <option>10 000 Robux</option>
+            <option>Roblox Premium 2200</option>
+        </select>
+        <button id="start">„Generieren“</button>
+
+        <div class="log" id="log" aria-live="polite"></div>
+        <div class="progress"><div class="bar" id="bar"></div></div>
+<!--        <div class="footer-note">Hinweis: Diese Demo zeigt typische Betrugs-Tricks. Es wird nichts „generiert“.</div>-->
+
+        <div class="reveal" id="reveal">
+            <h3>Was hier wirklich passiert (Erklärung)</h3>
+            <ul>
+                <li>📊 <span class="warn">Fake-Fortschritt</span>: Der Balken bewegt sich unabhängig von echten Servern.</li>
+                <li>🔐 <span class="warn">„Human Verification“</span>: Leitet zu Umfragen/Downloads um, damit Betrüger Geld verdienen.</li>
+                <li>🧪 <span class="warn">Pseudo-Prüfungen</span>: „Token“, „API-Check“, „Anti-Bot“ – reine Show ohne technische Substanz.</li>
+                <li>👤 <span class="warn">Datensammelei</span>: Oft werden Login-Daten abgegriffen → Account-Diebstahl.</li>
+                <li>✅ <span class="ok">Sicher & legal</span>: Robux nur über offizielle Käufe, Premium oder durch eigene Spiele/Items verdienen.</li>
+            </ul>
+            <p class="footer-note">Wenn du so etwas im Netz siehst: nichts eingeben, nichts installieren, melden und schließen.</p>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    const startBtn = document.getElementById('start');
+    const logEl = document.getElementById('log');
+    const bar = document.getElementById('bar');
+    const reveal = document.getElementById('reveal');
+    const userEl = document.getElementById('user');
+    const amountEl = document.getElementById('amount');
+
+
+
+    startBtn.addEventListener('click', runFake);
+</script>
+</body>
+</html>
