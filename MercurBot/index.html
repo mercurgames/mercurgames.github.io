@@ -6,27 +6,29 @@
 
 <style>
 body {
-    margin: 0;
+    margin: 40px;
     font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at 30% 30%, #0b98e4, #0000ff);
-    color: white;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
+    background: radial-gradient(circle at 30% 30%, #00d0ff, #0697f8);
+    color: #d1d1d1;
+    line-height: 1.6;
 }
 
-/* Glow Hintergrund Effekt */
-body::before {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: #8b5cf6;
-    filter: blur(200px);
-    opacity: 0.4;
-    border-radius: 50%;
-    top: -200px;
-    left: -200px;
+/* Headings */
+h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+/* Optional subtle card effect */
+.content {
+    max-width: 700px;
 }
 
 /* Glass Card */
@@ -64,7 +66,12 @@ button:hover {
 </style>
 </head>
 <body>
+
+<div class="content">
   <h1>MercurBot</h1>
   <p>Coming soon...</p>
+</div>
+
+
 </body>
 </html>
