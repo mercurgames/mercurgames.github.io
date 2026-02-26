@@ -71,8 +71,24 @@ button:hover {
     gap: 2.5rem;
 }
 
+.discord-overlay {
+border-radius: 25px;
+background: linear-gradient(180deg, rgba(13, 0, 255, 0.75), rgba(0, 212, 254, 0.9));
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 2rem;
+transition: 0.3s ease;
+}
+
+.discord-overlay:hover {
+    transform: translateY(-10px);
+}
+
 /* NAVBAR */
 .navbar {
+z-index: 999;
+
     position: fixed;
     top: 20px;
     left: 50%;
